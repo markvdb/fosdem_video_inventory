@@ -17,17 +17,17 @@ class VideoGear(models.Model):
       (4, 'camera'),
       (5, 'tiepin mic'),
    )
-    rental_tag = models.CharField(max_length=20)
+    rental_tag = models.CharField(max_length=20, blank=True)
     '''gear_type = models.PositiveSmallIntegerField(
       choices=GEARTYPE,
       default=1,
     )'''
-    fosdem_tag = models.SlugField(unique=True)
+    fosdem_tag = models.SlugField(unique=True, blank=True)
     gear_type = models.PositiveSmallIntegerField(
             choices=GEARTYPE,
             default=1,
     )
-    notes = models.TextField(max_length=200)
+    notes = models.TextField(max_length=200, blank=True)
     state = models.PositiveSmallIntegerField(
       choices=STATE,
       default=1,

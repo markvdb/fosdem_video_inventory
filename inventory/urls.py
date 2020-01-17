@@ -23,5 +23,5 @@ admin.site.index_title = "FOSDEM video rental gear admin"
 
 urlpatterns = [
     path('tag/', include('videogear.urls')),
-    path('admin/', admin.site.urls),
+    path('', admin.site.urls),
 ]
